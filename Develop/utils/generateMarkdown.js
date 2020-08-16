@@ -1,5 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  //If statements here cycle thru which badge and license info loads based on user selection 
   let badge = "";
   let licenseInfo = "";
 
@@ -947,75 +948,73 @@ function generateMarkdown(data) {
   //if/else statement determines which literal template to use: true uses the table of contents, false has no table of contents in the template
   if (data.tableContent === true) {
     return `
-    ${badge}
-    ### ${data.title}
+${badge}
+### ${data.title}
 
-    ## Description:
+## Description:
+
+${data.description}
+
+## Table of Contents:
+- [installation](#installation)
+- [usage](#usage)
+- [contribution](#contribution)
+- [licenses](#licenses)
+- [test](#test)
+- [contact](#contact)
+
+## Installation:
+${data.installation}
+
+## Usage:
+${data.usage}
+
+## Contribution:
+${data.contribution}
+
+## Licenses:
+${licenseInfo}
+
+## Test:
+${data.test}
+
+## Contact:
+
+GitHub: https://github.com/${data.github}
+
+Email: ${data.email}
+    `;
+
+  } else {
     
-    ${data.description}
-    
-    ## Table of Contents:
-    - [installation](#installation)
-    - [usage](#usage)
-    - [contribution](#contribution)
-    - [licenses](#licenses)
-    - [test](#test)
-    - [contact](#contact)
-    
-    ## Installation:
-    ${data.installation}
-
-    ## Usage:
-    ${data.usage}
-
-    ## Contribution:
-    ${data.contribution}
-
-    ## Licenses:
-    ${licenseInfo}
-
-    ## Test:
-    ${data.test}
-
-    ## Contact:
-    
-    GitHub: https://github.com/${data.github}
-
-    Email: ${data.email}
-    
-
-
-  `;
-  }
-  else {
     return `
-    ${badge}
-    ### ${data.title}
+${badge}
+### ${data.title}
 
-    ## Description:
-    
-    ${data.description}
-    
-    ## Installation:
-    ${data.installation}
+## Description:
 
-    ## Usage:
-    ${data.usage}
+${data.description}
 
-    ## Contribution:
-    ${data.contribution}
+## Installation:
+${data.installation}
 
-    ## Licenses:
-    ${licenseInfo}
+## Usage:
+${data.usage}
 
-    ## Test:
-    ${data.test}
+## Contribution:
+${data.contribution}
 
-    ## Contact:
-    
-    GitHub: https://github.com/${data.github}
+## Licenses:
+${licenseInfo}
 
-    Email: ${data.email}
+## Test:
+${data.test}
+
+## Contact:
+
+GitHub: https://github.com/${data.github}
+
+Email: ${data.email}
     `;
   }
 }
