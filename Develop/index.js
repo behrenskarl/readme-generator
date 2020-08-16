@@ -45,9 +45,15 @@ const questions = [
         name: "test"
     },
     {
-        type: "input",
+        type: "list",
         message: "What licenses are required to use this project?",
-        name: "licenses"
+        name: "licenses",
+        choices: [
+            "Apache License 2.0",
+            "MIT License",
+            "GNU General Public License 3.0",
+            "The Unlicense"
+        ]
     },
     {
         type: "input",
@@ -81,18 +87,3 @@ function init() {
 
 // function call to initialize program
 init();
-
-
-
-//KARL - check out Activity 4 in OOP, you might need to make the const markdown a light green constructor thing 
-//and find a way to push the userinput data to generateMarkdown file so that the readme file populates in the right format as coded in generateMarkdown.js
-
-
-
-
-// const username = questions.username
-
-// axios.get(`https://api.github.com/users/${username}`)
-// .then(questions => {
-//   console.log(questions.data);
-// });
