@@ -949,7 +949,7 @@ function generateMarkdown(data) {
   if (data.tableContent === true) {
     return `
 ${badge}
-### ${data.title}
+# ${data.title}
 
 ## Description:
 
@@ -989,7 +989,7 @@ Email: ${data.email}
     
     return `
 ${badge}
-### ${data.title}
+# ${data.title}
 
 ## Description:
 

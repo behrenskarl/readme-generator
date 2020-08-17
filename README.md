@@ -1,11 +1,11 @@
 ![License](https://img.shields.io/badge/License-The%20Unlicense-yellow)
-### README Generator
+# README Generator
 
 ## Description:
 
 Use node and the console to prompt the user what they would like to include in their README files for their projects. Takes the user input and generates a concise and well-designed README.md file with a template literal.
 
-![Video]("./Assets/functionality.gif")
+![Video](./Assets/functionality.gif)
 
 ## Table of Contents:
 - [installation](#installation)
